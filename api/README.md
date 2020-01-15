@@ -2,20 +2,30 @@
 
 Exposes a REST API for all the functionalities required by the front-end client.
 
-### Setting up
+### Installing all the dependancies
 
 ```sh
 cd api
-pip3 install -r requirement.txt
+pip3 install -r requirements.txt
+```
+### Setting up the database
+
+```sh
+flask db init
+flask db migrate -m "New Tables"
+flask db upgrade
+```
+### Starting the server
+
+```sh
 python3 main.py
 ```
-
 ### Endpoints
 
 - `GET /peep`: Peep functionality
 
-- `POST /users`: Creates new user
+- `POST /sign_up`: Creates new user
 
-- `GET /users/{id}` : Fetches existing user
+- `GET /user_list` : Fetches existing user list
 
 - `POST /users/{id}`: Updates existing user
