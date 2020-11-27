@@ -33,13 +33,13 @@ pip3 install -r requirements.txt
 ```
 ### Setting up the database
 ```sh
-FLASK_APP=main flask db init
-FLASK_APP=main flask db migrate -m "New Tables"
-FLASK_APP=main flask db upgrade
+$env:FLASK_APP = "main"
+flask db init
+flask db migrate -m "New Tables"
+flask db upgrade
 ```
 ### Starting the server
 ```sh
-$env:FLASK_APP = "main"
 flask run
 ```
 
